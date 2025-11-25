@@ -1,3 +1,17 @@
+/**
+ * DocsPage - 组件文档页面
+ * 
+ * 架构说明：
+ * - Sidebar 组件：从 docs/config.ts 读取导航配置自动生成
+ * - PropsTable 组件：从 docs/components/PropsTable.tsx 导入
+ * - 组件文档：可逐步迁移到 docs/components/docs/ 目录
+ * 
+ * 添加新组件文档步骤：
+ * 1. 在 docs/config.ts 的 navConfig 中添加导航项
+ * 2. 在 docs/components/docs/ 创建 XxxDoc.tsx
+ * 3. 在下方内容区域引用或直接编写
+ */
+
 import { Navbar } from "../components/layout/navbar"
 import { Footer } from "../components/layout/footer"
 import { Container, Section } from "../components/ui/container"
@@ -20,36 +34,23 @@ import { Slider } from "../components/ui/slider"
 import { Progress } from "../components/ui/progress"
 import { Skeleton } from "../components/ui/skeleton"
 import { Spinner } from "../components/ui/spinner"
+import { Toaster } from "../components/ui/toast"
 import { Info, CheckCircle, X } from "lucide-react"
 import { useState } from "react"
 
-// Props 表格组件
-function PropsTable({ data }: { data: Array<{ prop: string; type: string; default: string; description: string }> }) {
-    return (
-        <div className="overflow-auto">
-            <table className="w-full border-2 border-border">
-                <thead>
-                    <tr className="border-b-2 border-border bg-muted">
-                        <th className="p-3 text-left font-bold">Prop</th>
-                        <th className="p-3 text-left font-bold">类型</th>
-                        <th className="p-3 text-left font-bold">默认值</th>
-                        <th className="p-3 text-left font-bold">描述</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((row, i) => (
-                        <tr key={i} className={i < data.length - 1 ? "border-b border-border" : ""}>
-                            <td className="p-3 font-mono text-sm">{row.prop}</td>
-                            <td className="p-3 font-mono text-sm">{row.type}</td>
-                            <td className="p-3 font-mono text-sm">{row.default}</td>
-                            <td className="p-3">{row.description}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    )
-}
+// 从 docs 模块导入共享组件和组件文档
+import { 
+    Sidebar, 
+    PropsTable,
+    // 组件文档
+    ToastDoc,
+    DrawerDoc,
+    SeparatorDoc,
+    LabelDoc,
+    TreeSelectDoc,
+    BreadcrumbDoc,
+    PaginationDoc,
+} from "../docs"
 
 export function DocsPage() {
     const [sliderValue, setSliderValue] = useState([50])
@@ -62,69 +63,8 @@ export function DocsPage() {
             <Section className="border-b-2 border-border">
                 <Container>
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                        {/* Sidebar */}
-                        <aside className="lg:col-span-1">
-                            <div className="sticky top-24 space-y-6">
-                                <div>
-                                    <H2 className="text-lg mb-3">组件导航</H2>
-
-                                    <div className="space-y-4">
-                                        {/* 基础组件 */}
-                                        <div>
-                                            <h4 className="font-bold text-sm mb-2 text-muted-foreground">基础组件</h4>
-                                            <nav className="space-y-1">
-                                                <a href="#button" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Button</a>
-                                                <a href="#typography" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Typography</a>
-                                                <a href="#badge" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Badge</a>
-                                            </nav>
-                                        </div>
-
-                                        {/* 表单组件 */}
-                                        <div>
-                                            <h4 className="font-bold text-sm mb-2 text-muted-foreground">表单组件</h4>
-                                            <nav className="space-y-1">
-                                                <a href="#input" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Input</a>
-                                                <a href="#textarea" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Textarea</a>
-                                                <a href="#checkbox" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Checkbox</a>
-                                                <a href="#radio" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">RadioGroup</a>
-                                                <a href="#switch" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Switch</a>
-                                                <a href="#slider" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Slider</a>
-                                            </nav>
-                                        </div>
-
-                                        {/* 数据展示 */}
-                                        <div>
-                                            <h4 className="font-bold text-sm mb-2 text-muted-foreground">数据展示</h4>
-                                            <nav className="space-y-1">
-                                                <a href="#card" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Card</a>
-                                                <a href="#table" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Table</a>
-                                                <a href="#avatar" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Avatar</a>
-                                                <a href="#skeleton" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Skeleton</a>
-                                                <a href="#progress" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Progress</a>
-                                                <a href="#spinner" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Spinner</a>
-                                            </nav>
-                                        </div>
-
-                                        {/* 反馈组件 */}
-                                        <div>
-                                            <h4 className="font-bold text-sm mb-2 text-muted-foreground">反馈组件</h4>
-                                            <nav className="space-y-1">
-                                                <a href="#alert" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Alert</a>
-                                            </nav>
-                                        </div>
-
-                                        {/* 导航组件 */}
-                                        <div>
-                                            <h4 className="font-bold text-sm mb-2 text-muted-foreground">导航组件</h4>
-                                            <nav className="space-y-1">
-                                                <a href="#tabs" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Tabs</a>
-                                                <a href="#accordion" className="block py-1.5 px-3 text-sm hover:bg-muted border-2 border-transparent hover:border-border transition-colors">Accordion</a>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
+                        {/* Sidebar - 从 docs/config.ts 自动生成 */}
+                        <Sidebar />
 
                         {/* Main Content */}
                         <main className="lg:col-span-3 space-y-16">
@@ -1092,6 +1032,32 @@ import { Info, CheckCircle, X } from 'lucide-react'
                                         </div>
                                     </div>
                                 </section>
+
+                                {/* Breadcrumb - 使用独立组件 */}
+                                <BreadcrumbDoc />
+
+                                {/* Pagination - 使用独立组件 */}
+                                <PaginationDoc />
+                            </div>
+
+                            {/* ========== 反馈组件（新增） ========== */}
+                            <div>
+                                <H2 className="mb-8 pb-4 border-b-2 border-border">反馈组件（新增）</H2>
+                                <ToastDoc />
+                                <DrawerDoc />
+                            </div>
+
+                            {/* ========== 布局组件（新增） ========== */}
+                            <div>
+                                <H2 className="mb-8 pb-4 border-b-2 border-border">布局组件（新增）</H2>
+                                <SeparatorDoc />
+                                <LabelDoc />
+                            </div>
+
+                            {/* ========== 高级组件（新增） ========== */}
+                            <div>
+                                <H2 className="mb-8 pb-4 border-b-2 border-border">高级组件（新增）</H2>
+                                <TreeSelectDoc />
                             </div>
 
                             {/* 结尾说明 */}
@@ -1116,6 +1082,7 @@ import { Info, CheckCircle, X } from 'lucide-react'
             </Section>
 
             <Footer />
+            <Toaster />
         </div>
     )
 }

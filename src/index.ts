@@ -14,10 +14,18 @@ export { Checkbox } from './components/ui/checkbox'
 export { RadioGroup, RadioGroupItem } from './components/ui/radio-group'
 export { Switch } from './components/ui/switch'
 export { Slider } from './components/ui/slider'
+export { Label } from './components/ui/label'
+export type { LabelProps } from './components/ui/label'
+
+// ============ 树状选择器 ============
+export { TreeSelect } from './components/ui/tree-select'
+export type { TreeSelectProps, TreeNode } from './components/ui/tree-select'
 
 // ============ 布局组件 ============
 export { Card, CardContent } from './components/ui/card'
 export { Container, Section } from './components/ui/container'
+export { Separator } from './components/ui/separator'
+export type { SeparatorProps } from './components/ui/separator'
 
 // ============ 数据展示 ============
 export {
@@ -44,9 +52,29 @@ export {
     AccordionTrigger,
     AccordionContent
 } from './components/ui/accordion'
+export {
+    Breadcrumb,
+    BreadcrumbList,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+    BreadcrumbEllipsis
+} from './components/ui/breadcrumb'
+export {
+    Pagination,
+    PaginationContent,
+    PaginationItem,
+    PaginationLink,
+    PaginationPrevious,
+    PaginationNext,
+    PaginationEllipsis,
+    SimplePagination
+} from './components/ui/pagination'
 
 // ============ 反馈组件 ============
 export { Alert } from './components/ui/alert'
+export { Toaster, toast } from './components/ui/toast'
 
 export {
     Dialog,
@@ -60,6 +88,19 @@ export {
     DialogTitle,
     DialogDescription
 } from './components/ui/dialog'
+
+export {
+    Drawer,
+    DrawerPortal,
+    DrawerOverlay,
+    DrawerTrigger,
+    DrawerClose,
+    DrawerContent,
+    DrawerHeader,
+    DrawerFooter,
+    DrawerTitle,
+    DrawerDescription
+} from './components/ui/drawer'
 
 export {
     Tooltip,
