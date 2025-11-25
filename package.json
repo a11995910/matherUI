@@ -1,13 +1,57 @@
 {
   "name": "matherui",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A brutalist/retro React component library with bold design language",
+  "private": false,
   "type": "module",
+  "main": "./dist/matherui.cjs",
+  "module": "./dist/matherui.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/matherui.js",
+      "require": "./dist/matherui.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:lib": "vite build --config vite.config.lib.ts",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "brutalist",
+    "retro",
+    "typescript",
+    "tailwind",
+    "design-system",
+    "component-library"
+  ],
+  "author": "MatherUI Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a11995910/matherUI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a11995910/matherUI/issues"
+  },
+  "homepage": "https://github.com/a11995910/matherUI#readme",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -49,6 +93,7 @@
     "tailwindcss": "^4.1.17",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.3.0"
   }
 }
