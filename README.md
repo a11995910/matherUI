@@ -27,11 +27,11 @@
 ## 📦 安装
 
 ```bash
-npm install mather-ui
+npm install matherui
 # 或
-yarn add mather-ui
+yarn add matherui
 # 或
-pnpm add mather-ui
+pnpm add matherui
 ```
 
 ## 🚀 快速开始
@@ -72,7 +72,7 @@ module.exports = {
 ### 3. 使用组件
 
 ```tsx
-import { Button } from 'mather-ui'
+import { Button } from 'matherui'
 
 function App() {
   return (
@@ -152,8 +152,8 @@ function App() {
 运行示例项目：
 
 ```bash
-git clone https://github.com/yourusername/matherui.git
-cd matherui
+git clone https://github.com/a11995910/matherUI.git
+cd matherUI
 npm install
 npm run dev
 ```
