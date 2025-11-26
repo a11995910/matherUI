@@ -50,6 +50,12 @@ import {
     TreeSelectDoc,
     BreadcrumbDoc,
     PaginationDoc,
+    // 新增组件文档
+    DatePickerDoc,
+    StepsDoc,
+    RateDoc,
+    TagDoc,
+    EmptyDoc,
 } from "../docs"
 
 export function DocsPage() {
@@ -991,7 +997,7 @@ import { Info, CheckCircle, X } from 'lucide-react'
                                                 <AccordionItem value="item-2">
                                                     <AccordionTrigger>如何安装？</AccordionTrigger>
                                                     <AccordionContent>
-                                                        使用 npm install mather-ui 或 yarn add mather-ui 进行安装。安装后导入需要的组件即可使用。
+                                                        使用 npm install matherui 或 yarn add matherui 进行安装。安装后导入需要的组件即可使用。
                                                     </AccordionContent>
                                                 </AccordionItem>
                                                 <AccordionItem value="item-3">
@@ -1058,6 +1064,11 @@ import { Info, CheckCircle, X } from 'lucide-react'
                             <div>
                                 <H2 className="mb-8 pb-4 border-b-2 border-border">高级组件（新增）</H2>
                                 <TreeSelectDoc />
+                                <DatePickerDoc />
+                                <StepsDoc />
+                                <RateDoc />
+                                <TagDoc />
+                                <EmptyDoc />
                             </div>
 
                             {/* 结尾说明 */}
@@ -1065,7 +1076,7 @@ import { Info, CheckCircle, X } from 'lucide-react'
                                 <Card className="bg-card">
                                     <CardContent className="p-6">
                                         <H3 className="mb-2">📚 完整文档已上线！</H3>
-                                        <P className="mt-0 mb-4">MatherUI 现已包含 20+ 个组件的完整文档，每个组件都有：</P>
+                                        <P className="mt-0 mb-4">MatherUI 现已包含 35+ 个组件的完整文档，每个组件都有：</P>
                                         <div className="space-y-1 text-sm ml-4">
                                             <p>✅ 详细的功能描述</p>
                                             <p>✅ 多个可视化示例</p>

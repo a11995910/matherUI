@@ -24,4 +24,9 @@ export {
     DrawerDoc,
     SeparatorDoc,
     TreeSelectDoc,
+    DatePickerDoc,
+    StepsDoc,
+    RateDoc,
+    TagDoc,
+    EmptyDoc,
 } from "./components/docs"

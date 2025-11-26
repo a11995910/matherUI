@@ -28,3 +28,8 @@ export { SeparatorDoc } from "./SeparatorDoc"
 
 // 高级组件（新增）
 export { TreeSelectDoc } from "./TreeSelectDoc"
+export { DatePickerDoc } from "./DatePickerDoc"
+export { StepsDoc } from "./StepsDoc"
+export { RateDoc } from "./RateDoc"
+export { TagDoc } from "./TagDoc"
+export { EmptyDoc } from "./EmptyDoc"

@@ -65,9 +65,9 @@ function App() {
           {/* Quick Install */}
           <div className="mt-16 max-w-2xl mx-auto">
             <CodeBlock title="快速安装">
-              {`npm install mather-ui
+              {`npm install matherui
 # 或使用 yarn
-yarn add mather-ui`}
+yarn add matherui`}
             </CodeBlock>
           </div>
         </Container>
@@ -292,7 +292,7 @@ yarn add mather-ui`}
                 <AccordionItem value="item-2">
                   <AccordionTrigger>如何安装？</AccordionTrigger>
                   <AccordionContent>
-                    使用 npm install mather-ui 或 yarn add mather-ui 即可安装。
+                    使用 npm install matherui 或 yarn add matherui 即可安装。
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">

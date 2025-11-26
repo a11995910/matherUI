@@ -76,6 +76,11 @@ export const navConfig: NavCategory[] = [
         isNew: true,
         items: [
             { id: "tree-select", label: "TreeSelect 树状选择器", href: "#tree-select" },
+            { id: "date-picker", label: "DatePicker 日期选择", href: "#date-picker" },
+            { id: "steps", label: "Steps 步骤条", href: "#steps" },
+            { id: "rate", label: "Rate 评分", href: "#rate" },
+            { id: "tag", label: "Tag 标签", href: "#tag" },
+            { id: "empty", label: "Empty 空状态", href: "#empty" },
         ],
     },
 ]

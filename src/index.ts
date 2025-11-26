@@ -150,6 +150,13 @@ export {
 export { H1, H2, H3, P } from './components/ui/typography'
 export { CodeBlock } from './components/ui/code-block'
 
+// ============ 新增组件 ============
+export { Empty, type EmptyProps } from './components/ui/empty'
+export { Tag, tagVariants, type TagProps } from './components/ui/tag'
+export { Steps, type StepsProps, type StepItem } from './components/ui/steps'
+export { Rate, type RateProps } from './components/ui/rate'
+export { DatePicker, type DatePickerProps } from './components/ui/date-picker'
+
 // ============ 工具函数 ============
 export { cn } from './lib/utils'
 
