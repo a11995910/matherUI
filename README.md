@@ -18,7 +18,7 @@
 ## ✨ 特性
 
 - 🎨 **独特美学** - 复古/野兽派设计风格，大胆的黑色边框和硬阴影
-- 📦 **丰富组件** - 20+ 个精心设计的 UI 组件
+- 📦 **丰富组件** - 35+ 个精心设计的 UI 组件
 - 🔧 **TypeScript** - 完整的类型定义支持
 - 🎯 **易于定制** - 基于 Tailwind CSS，轻松定制样式
 - ♿ **可访问性** - 遵循 WAI-ARIA 设计模式
@@ -36,40 +36,56 @@ pnpm add matherui
 
 ## 🚀 快速开始
 
-### 1. 安装依赖
+### 1. 前置要求
 
-确保你的项目已安装以下依赖：
-
-```bash
-npm install react react-dom tailwindcss
-```
+确保你的项目已配置 [Tailwind CSS](https://tailwindcss.com/docs/installation)。
 
 ### 2. 配置 Tailwind CSS
 
-在 `tailwind.config.js` 中添加 MatherUI 的路径：
+在你的 `tailwind.config.js` 中添加 MatherUI 的路径和主题配置：
 
 ```javascript
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/mather-ui/**/*.{js,ts,jsx,tsx}",
+    // 添加 MatherUI 组件路径
+    "./node_modules/matherui/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      // MatherUI 的自定义配色
+      // MatherUI 主题配色
       colors: {
         background: "#fbf9f5",
         foreground: "#1a1a1a",
-        primary: "#66b3ff",
-        secondary: "#ff8f4d",
-        // ... 更多颜色配置
+        primary: { DEFAULT: "#66b3ff", foreground: "#000000" },
+        secondary: { DEFAULT: "#ff8f4d", foreground: "#000000" },
+        muted: { DEFAULT: "#f0eee9", foreground: "#666666" },
+        border: "#000000",
+        card: { DEFAULT: "#ffffff", foreground: "#1a1a1a" },
+      },
+      boxShadow: {
+        'retro': '4px 4px 0px 0px rgba(0,0,0,1)',
+        'retro-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
       },
     },
   },
 }
 ```
 
-### 3. 使用组件
+### 3. 导入样式（可选）
+
+MatherUI 提供了预设的主题变量和暗色模式支持：
+
+```tsx
+// 在你的入口文件中导入
+import 'matherui/styles.css'
+```
+
+如果你想完全自定义主题，可以跳过此步骤，直接在 Tailwind 配置中定义颜色变量。
+
+### 4. 使用组件
 
 ```tsx
 import { Button } from 'matherui'
@@ -87,42 +103,55 @@ function App() {
 
 ### 基础组件
 - **Button** - 按钮（多种变体）
+- **Typography** - 排版组件（H1-H3、P）
+- **Badge** - 徽章标签
+- **Tag** - 可关闭标签
+
+### 表单组件
 - **Input** - 输入框
 - **Textarea** - 多行文本输入
 - **Checkbox** - 复选框
-- **Radio** - 单选按钮
+- **RadioGroup** - 单选按钮组
 - **Switch** - 开关
 - **Slider** - 滑块
-- **Progress** - 进度条
+- **Select** - 下拉选择
+- **DatePicker** - 日期选择器
+- **TreeSelect** - 树状选择器
+- **Label** - 表单标签
 
 ### 布局组件
 - **Card** - 卡片容器
 - **Container** - 响应式容器
-- **Section** - 页面分区
+- **Separator** - 分隔线
 
 ### 数据展示
 - **Table** - 数据表格
-- **Badge** - 徽章标签
 - **Avatar** - 头像
 - **Skeleton** - 加载占位
+- **Progress** - 进度条
 - **Spinner** - 加载动画
+- **Empty** - 空状态
+- **Rate** - 评分
+- **Steps** - 步骤条
 
 ### 导航组件
-- **Navbar** - 导航栏
-- **Footer** - 页脚
 - **Tabs** - 标签页
-- **Dropdown Menu** - 下拉菜单
+- **Accordion** - 手风琴
+- **Breadcrumb** - 面包屑
+- **Pagination** - 分页
+- **DropdownMenu** - 下拉菜单
 
 ### 反馈组件
 - **Alert** - 提示框
 - **Dialog** - 对话框/弹窗
+- **Drawer** - 抽屉
 - **Tooltip** - 工具提示
-- **Toast** - 通知
+- **Toast** - 消息通知
+- **Popover** - 气泡卡片
 
 ### 其他组件
-- **Accordion** - 手风琴
 - **CodeBlock** - 代码展示
-- **Typography** - 排版组件
+- **ThemeToggle** - 主题切换
 
 ## 🎨 设计系统
 

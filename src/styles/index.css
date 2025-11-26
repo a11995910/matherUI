@@ -1,0 +1,49 @@
+/**
+ * MatherUI 主题变量
+ * 用户可以导入此文件来使用默认主题，或自行在 Tailwind 中配置
+ * 
+ * 使用方法：
+ * import 'matherui/styles.css'
+ */
+
+/* 字体（可选） */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700&display=swap');
+
+/* 主题变量 */
+:root {
+  /* Light Mode (Default) */
+  --color-background: #fbf9f5;
+  --color-foreground: #1a1a1a;
+  --color-primary: #66b3ff;
+  --color-primary-foreground: #000000;
+  --color-secondary: #ff8f4d;
+  --color-secondary-foreground: #000000;
+  --color-muted: #f0eee9;
+  --color-muted-foreground: #666666;
+  --color-border: #000000;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
+  
+  /* 字体 */
+  --font-serif: 'Merriweather', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* 阴影 */
+  --shadow-retro: 4px 4px 0px 0px rgba(0,0,0,1);
+  --shadow-retro-hover: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+
+/* Dark Mode */
+.dark {
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f5f5;
+  --color-primary: #4d9fff;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #ff6b2c;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #1a1a1a;
+  --color-muted-foreground: #a0a0a0;
+  --color-border: #ffffff;
+  --color-card: #141414;
+  --color-card-foreground: #f5f5f5;
+}

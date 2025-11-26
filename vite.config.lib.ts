@@ -8,8 +8,10 @@ export default defineConfig({
     plugins: [
         react(),
         dts({
-            include: ['src/components/**/*.tsx', 'src/lib/**/*.ts', 'src/contexts/**/*.tsx'],
-            exclude: ['src/**/*.test.tsx', 'src/**/*.stories.tsx', 'src/App.tsx', 'src/main.tsx', 'src/Router.tsx', 'src/pages/**/*']
+            entryRoot: 'src',
+            outDir: 'dist',
+            exclude: ['src/**/*.test.tsx', 'src/**/*.stories.tsx', 'src/App.tsx', 'src/main.tsx', 'src/Router.tsx', 'src/pages/**/*', 'src/docs/**/*'],
+            tsconfigPath: './tsconfig.app.json'
         })
     ],
     build: {
@@ -18,6 +20,8 @@ export default defineConfig({
             name: 'MatherUI',
             fileName: (format) => `matherui.${format === 'es' ? 'js' : 'cjs'}`
         },
+        // 复制样式文件
+        copyPublicDir: false,
         rollupOptions: {
             // 外部化依赖，不打包进库
             external: [
