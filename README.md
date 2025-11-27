@@ -18,7 +18,7 @@
 ## ✨ 特性
 
 - 🎨 **独特美学** - 复古/野兽派设计风格，大胆的黑色边框和硬阴影
-- 📦 **丰富组件** - 35+ 个精心设计的 UI 组件
+- 📦 **丰富组件** - 45+ 个精心设计的 UI 组件
 - 🔧 **TypeScript** - 完整的类型定义支持
 - 🎯 **易于定制** - 基于 Tailwind CSS，轻松定制样式
 - ♿ **可访问性** - 遵循 WAI-ARIA 设计模式
@@ -109,6 +109,7 @@ function App() {
 
 ### 表单组件
 - **Input** - 输入框
+- **InputNumber** - 数字输入框
 - **Textarea** - 多行文本输入
 - **Checkbox** - 复选框
 - **RadioGroup** - 单选按钮组
@@ -116,7 +117,9 @@ function App() {
 - **Slider** - 滑块
 - **Select** - 下拉选择
 - **DatePicker** - 日期选择器
+- **TimePicker** - 时间选择器
 - **TreeSelect** - 树状选择器
+- **Upload** - 文件上传
 - **Label** - 表单标签
 
 ### 布局组件
@@ -127,14 +130,19 @@ function App() {
 ### 数据展示
 - **Table** - 数据表格
 - **Avatar** - 头像
+- **Image** - 图片（预览、缩放）
+- **Carousel** - 轮播图
 - **Skeleton** - 加载占位
 - **Progress** - 进度条
 - **Spinner** - 加载动画
 - **Empty** - 空状态
 - **Rate** - 评分
 - **Steps** - 步骤条
+- **Timeline** - 时间线
+- **Calendar** - 日历
 
 ### 导航组件
+- **Menu** - 导航菜单
 - **Tabs** - 标签页
 - **Accordion** - 手风琴
 - **Breadcrumb** - 面包屑

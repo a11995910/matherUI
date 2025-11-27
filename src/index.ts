@@ -157,6 +157,16 @@ export { Steps, type StepsProps, type StepItem } from './components/ui/steps'
 export { Rate, type RateProps } from './components/ui/rate'
 export { DatePicker, type DatePickerProps } from './components/ui/date-picker'
 
+// ============ 高级组件 ============
+export { InputNumber, type InputNumberProps } from './components/ui/input-number'
+export { TimePicker, type TimePickerProps } from './components/ui/time-picker'
+export { Upload, type UploadProps, type UploadFile } from './components/ui/upload'
+export { Image, type ImageProps } from './components/ui/image'
+export { Carousel, CarouselItem, type CarouselProps, type CarouselItemProps } from './components/ui/carousel'
+export { Menu, type MenuProps, type MenuItem } from './components/ui/menu'
+export { Timeline, type TimelineProps, type TimelineItem } from './components/ui/timeline'
+export { Calendar, type CalendarProps } from './components/ui/calendar'
+
 // ============ 工具函数 ============
 export { cn } from './lib/utils'
 

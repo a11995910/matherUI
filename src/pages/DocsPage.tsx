@@ -56,6 +56,14 @@ import {
     RateDoc,
     TagDoc,
     EmptyDoc,
+    InputNumberDoc,
+    TimePickerDoc,
+    UploadDoc,
+    ImageDoc,
+    CarouselDoc,
+    MenuDoc,
+    TimelineDoc,
+    CalendarDoc,
 } from "../docs"
 
 export function DocsPage() {
@@ -1069,6 +1077,14 @@ import { Info, CheckCircle, X } from 'lucide-react'
                                 <RateDoc />
                                 <TagDoc />
                                 <EmptyDoc />
+                                <InputNumberDoc />
+                                <TimePickerDoc />
+                                <UploadDoc />
+                                <ImageDoc />
+                                <CarouselDoc />
+                                <MenuDoc />
+                                <TimelineDoc />
+                                <CalendarDoc />
                             </div>
 
                             {/* 结尾说明 */}

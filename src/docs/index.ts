@@ -29,4 +29,12 @@ export {
     RateDoc,
     TagDoc,
     EmptyDoc,
+    InputNumberDoc,
+    TimePickerDoc,
+    UploadDoc,
+    ImageDoc,
+    CarouselDoc,
+    MenuDoc,
+    TimelineDoc,
+    CalendarDoc,
 } from "./components/docs"
