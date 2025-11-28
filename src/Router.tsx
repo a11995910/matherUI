@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import App from './App'
 import { DashboardExample } from './pages/DashboardExample'
 import { FormExample } from './pages/FormExample'
@@ -43,7 +43,7 @@ function Navigation() {
 export function Router() {
     return (
         <ThemeProvider>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     <Route path="/" element={<App />} />
                     <Route path="/docs" element={<DocsPage />} />
@@ -51,7 +51,7 @@ export function Router() {
                     <Route path="/form" element={<FormExample />} />
                 </Routes>
                 <Navigation />
-            </BrowserRouter>
+            </HashRouter>
         </ThemeProvider>
     )
 }
