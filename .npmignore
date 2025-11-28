@@ -1,0 +1,43 @@
+# NPM Ignore
+
+# Source files
+src/
+public/
+
+# Development files
+.github/
+.vscode/
+*.log
+*.lock
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+__tests__/
+coverage/
+
+# Config files
+.eslintrc*
+.prettierrc*
+tsconfig.json
+tsconfig.*.json
+vite.config.ts
+vite.config.lib.ts
+tailwind.config.js
+postcss.config.cjs
+eslint.config.js
+
+# Documentation (already in files)
+*.md
+!README.md
+!LICENSE
+
+# Build artifacts not needed
+node_modules/
+.DS_Store
+*.tgz
+
+# Development HTML
+index.html
