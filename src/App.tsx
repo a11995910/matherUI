@@ -37,7 +37,7 @@ function App() {
       <Section className="relative border-b-2 border-border bg-[#f0eee9]">
         <Container className="py-24 text-center">
           <Badge variant="outline" className="mb-6 bg-white border-primary/50 text-primary px-4 py-1">
-            v1.0.0 现已发布
+            v1.1.0 已发布
           </Badge>
           <H1 className="text-5xl lg:text-7xl mb-6">
             复古风格的 <br />
