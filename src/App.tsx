@@ -12,11 +12,23 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 import { CodeBlock } from "./components/ui/code-block"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./components/ui/accordion"
+import { TiltCard } from "./components/ui/tilt-card"
+import { useTypewriter } from "./hooks/useTypewriter"
 import { useState } from "react"
+
+// 打字机效果的文本列表
+const typewriterTexts = [
+  "React 组件库",
+  "复古设计风格",
+  "TypeScript 支持",
+  "Tailwind CSS",
+  "开箱即用",
+]
 
 function App() {
   const [copiedButton, setCopiedButton] = useState(false)
   const [copiedInput, setCopiedInput] = useState(false)
+  const typewriterText = useTypewriter(typewriterTexts, 80, 40, 2000)
 
   const copyToClipboard = (text: string, type: 'button' | 'input') => {
     navigator.clipboard.writeText(text)
@@ -41,7 +53,10 @@ function App() {
           </Badge>
           <H1 className="text-5xl lg:text-7xl mb-6">
             复古风格的 <br />
-            <span className="text-primary">React 组件库</span>
+            <span className="text-primary">
+              {typewriterText}
+              <span className="animate-pulse">|</span>
+            </span>
           </H1>
           <P className="text-xl max-w-2xl mx-auto mb-8 text-foreground">
             MatherUI 是一个受 MotherDuck 启发的 React 组件库，采用大胆的复古/野兽派设计风格。
@@ -81,42 +96,48 @@ yarn add matherui`}
             <P className="text-lg">复古美学与现代技术的完美结合</P>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-card">
-              <CardContent className="p-6 text-center">
-                <div className="h-16 w-16 mx-auto mb-4 bg-primary/10 border-2 border-border flex items-center justify-center">
-                  <Palette className="h-8 w-8 text-primary" />
-                </div>
-                <H3 className="mb-3">独特设计</H3>
-                <P className="mt-0 text-sm">
-                  大胆的黑色边框、硬阴影和高对比度，打造独一无二的视觉体验。
-                </P>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ perspective: '1000px' }}>
+            <TiltCard maxTilt={12} className="h-full">
+              <Card className="bg-card h-full">
+                <CardContent className="p-6 text-center">
+                  <div className="h-16 w-16 mx-auto mb-4 bg-primary/10 border-2 border-border flex items-center justify-center">
+                    <Palette className="h-8 w-8 text-primary" />
+                  </div>
+                  <H3 className="mb-3">独特设计</H3>
+                  <P className="mt-0 text-sm">
+                    大胆的黑色边框、硬阴影和高对比度，打造独一无二的视觉体验。
+                  </P>
+                </CardContent>
+              </Card>
+            </TiltCard>
 
-            <Card className="bg-card">
-              <CardContent className="p-6 text-center">
-                <div className="h-16 w-16 mx-auto mb-4 bg-secondary/10 border-2 border-border flex items-center justify-center">
-                  <Zap className="h-8 w-8 text-secondary" />
-                </div>
-                <H3 className="mb-3">开发体验</H3>
-                <P className="mt-0 text-sm">
-                  完整的 TypeScript 支持，基于 Tailwind CSS，易于定制和扩展。
-                </P>
-              </CardContent>
-            </Card>
+            <TiltCard maxTilt={12} className="h-full">
+              <Card className="bg-card h-full">
+                <CardContent className="p-6 text-center">
+                  <div className="h-16 w-16 mx-auto mb-4 bg-secondary/10 border-2 border-border flex items-center justify-center">
+                    <Zap className="h-8 w-8 text-secondary" />
+                  </div>
+                  <H3 className="mb-3">开发体验</H3>
+                  <P className="mt-0 text-sm">
+                    完整的 TypeScript 支持，基于 Tailwind CSS，易于定制和扩展。
+                  </P>
+                </CardContent>
+              </Card>
+            </TiltCard>
 
-            <Card className="bg-card">
-              <CardContent className="p-6 text-center">
-                <div className="h-16 w-16 mx-auto mb-4 bg-primary/10 border-2 border-border flex items-center justify-center">
-                  <Package className="h-8 w-8 text-primary" />
-                </div>
-                <H3 className="mb-3">丰富组件</H3>
-                <P className="mt-0 text-sm">
-                  10+ 个精心设计的组件，满足大部分 UI 需求。
-                </P>
-              </CardContent>
-            </Card>
+            <TiltCard maxTilt={12} className="h-full">
+              <Card className="bg-card h-full">
+                <CardContent className="p-6 text-center">
+                  <div className="h-16 w-16 mx-auto mb-4 bg-primary/10 border-2 border-border flex items-center justify-center">
+                    <Package className="h-8 w-8 text-primary" />
+                  </div>
+                  <H3 className="mb-3">丰富组件</H3>
+                  <P className="mt-0 text-sm">
+                    45+ 个精心设计的组件，满足大部分 UI 需求。
+                  </P>
+                </CardContent>
+              </Card>
+            </TiltCard>
           </div>
         </Container>
       </Section>

@@ -16,6 +16,7 @@ export function Navbar() {
                 <nav className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
                     <Link to="/" className="hover:text-primary transition-colors">首页</Link>
                     <Link to="/docs" className="hover:text-primary transition-colors">文档</Link>
+                    <Link to="/effects" className="hover:text-primary transition-colors">特效</Link>
                     <Link to="/dashboard" className="hover:text-primary transition-colors">Dashboard</Link>
                 </nav>
                 <div className="flex items-center gap-4">

@@ -166,6 +166,15 @@ export { Carousel, CarouselItem, type CarouselProps, type CarouselItemProps } fr
 export { Menu, type MenuProps, type MenuItem } from './components/ui/menu'
 export { Timeline, type TimelineProps, type TimelineItem } from './components/ui/timeline'
 export { Calendar, type CalendarProps } from './components/ui/calendar'
+export { Collapsible, type CollapsibleProps } from './components/ui/collapsible'
+
+// ============ 特效组件 ============
+export { TiltCard, type TiltCardProps } from './components/ui/tilt-card'
+export { Marquee, type MarqueeProps } from './components/ui/marquee'
+export { GradientText, GradientBorder, type GradientTextProps, type GradientBorderProps } from './components/ui/gradient-text'
+export { MorphText, type MorphTextProps } from './components/ui/morph-text'
+export { useTypewriter } from './hooks/useTypewriter'
+export { useCountUp } from './hooks/useCountUp'
 
 // ============ 工具函数 ============
 export { cn } from './lib/utils'

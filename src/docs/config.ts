@@ -89,6 +89,7 @@ export const navConfig: NavCategory[] = [
             { id: "menu", label: "Menu 导航菜单", href: "#menu" },
             { id: "timeline", label: "Timeline 时间线", href: "#timeline" },
             { id: "calendar", label: "Calendar 日历", href: "#calendar" },
+            { id: "collapsible", label: "Collapsible 折叠", href: "#collapsible" },
         ],
     },
     {
@@ -96,6 +97,18 @@ export const navConfig: NavCategory[] = [
         isNew: true,
         items: [
             { id: "charts", label: "Charts 图表", href: "#charts" },
+        ],
+    },
+    {
+        name: "特效组件",
+        isNew: true,
+        items: [
+            { id: "effects", label: "Typewriter 打字机", href: "#effects" },
+            { id: "tilt-card", label: "TiltCard 倾斜卡片", href: "#tilt-card" },
+            { id: "count-up", label: "CountUp 数字递增", href: "#count-up" },
+            { id: "marquee", label: "Marquee 跑马灯", href: "#marquee" },
+            { id: "gradient", label: "Gradient 渐变动画", href: "#gradient" },
+            { id: "morph-text", label: "MorphText 文字变形", href: "#morph-text" },
         ],
     },
 ]

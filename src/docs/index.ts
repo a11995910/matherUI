@@ -38,4 +38,6 @@ export {
     TimelineDoc,
     CalendarDoc,
     ChartsDoc,
+    EffectsDoc,
+    CollapsibleDoc,
 } from "./components/docs"
