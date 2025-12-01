@@ -125,8 +125,8 @@ yarn add matherui`}
       <Section id="components" className="bg-background border-b-2 border-border">
         <Container>
           <div className="text-center mb-16">
-            <H2>组件展示</H2>
-            <P>探索 MatherUI 的所有组件</P>
+            <H2>精选组件预览</H2>
+            <P>快速浏览 MatherUI 的核心组件，更多组件请查看完整文档</P>
           </div>
 
           <div className="space-y-16">
@@ -319,6 +319,17 @@ yarn add matherui`}
                   </div>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* View All Components */}
+            <div className="text-center pt-8 border-t-2 border-border">
+              <P className="mb-6">以上仅展示部分核心组件，MatherUI 还提供 45+ 个精心设计的组件</P>
+              <Link to="/docs">
+                <Button size="lg" className="gap-2">
+                  <Package className="h-5 w-5" />
+                  查看全部组件文档
+                </Button>
+              </Link>
             </div>
           </div>
         </Container>

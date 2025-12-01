@@ -64,6 +64,7 @@ import {
     MenuDoc,
     TimelineDoc,
     CalendarDoc,
+    ChartsDoc,
 } from "../docs"
 
 export function DocsPage() {
@@ -1085,6 +1086,12 @@ import { Info, CheckCircle, X } from 'lucide-react'
                                 <MenuDoc />
                                 <TimelineDoc />
                                 <CalendarDoc />
+                            </div>
+
+                            {/* ========== 图表组件 ========== */}
+                            <div>
+                                <H2 className="mb-8 pb-4 border-b-2 border-border">图表组件</H2>
+                                <ChartsDoc />
                             </div>
 
                             {/* 结尾说明 */}

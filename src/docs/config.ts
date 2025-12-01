@@ -91,6 +91,13 @@ export const navConfig: NavCategory[] = [
             { id: "calendar", label: "Calendar 日历", href: "#calendar" },
         ],
     },
+    {
+        name: "图表组件",
+        isNew: true,
+        items: [
+            { id: "charts", label: "Charts 图表", href: "#charts" },
+        ],
+    },
 ]
 
 /**

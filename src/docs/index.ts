@@ -37,4 +37,5 @@ export {
     MenuDoc,
     TimelineDoc,
     CalendarDoc,
+    ChartsDoc,
 } from "./components/docs"

@@ -14,9 +14,9 @@ export function Navbar() {
                     <span className="font-serif font-bold text-2xl tracking-tight">MatherUI</span>
                 </Link>
                 <nav className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
-                    <a href="#components" className="hover:text-primary transition-colors">Components</a>
-                    <Link to="/docs" className="hover:text-primary transition-colors">Docs</Link>
-                    <Link to="/dashboard" className="hover:text-primary transition-colors">Examples</Link>
+                    <Link to="/" className="hover:text-primary transition-colors">首页</Link>
+                    <Link to="/docs" className="hover:text-primary transition-colors">文档</Link>
+                    <Link to="/dashboard" className="hover:text-primary transition-colors">Dashboard</Link>
                 </nav>
                 <div className="flex items-center gap-4">
                     <ThemeToggle />
