@@ -1,7 +1,7 @@
 # MatherUI
 
 <div align="center">
-  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version" />
+  <img src="https://img.shields.io/badge/version-1.2.0-blue.svg" alt="Version" />
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License" />
   <img src="https://img.shields.io/badge/React-19.2.0-61DAFB.svg" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-5.9.3-3178C6.svg" alt="TypeScript" />
@@ -22,7 +22,8 @@
 ## ✨ 特性
 
 - 🎨 **独特美学** - 复古/野兽派设计风格，大胆的黑色边框和硬阴影
-- 📦 **丰富组件** - 45+ 个精心设计的 UI 组件
+- 📦 **丰富组件** - 50+ 个精心设计的 UI 组件
+- ✨ **交互特效** - 打字机、3D倾斜、渐变动画等特效组件
 - 🔧 **TypeScript** - 完整的类型定义支持
 - 🎯 **易于定制** - 基于 Tailwind CSS，轻松定制样式
 - ♿ **可访问性** - 遵循 WAI-ARIA 设计模式
@@ -160,6 +161,16 @@ function App() {
 - **Tooltip** - 工具提示
 - **Toast** - 消息通知
 - **Popover** - 气泡卡片
+
+### 特效组件
+- **useTypewriter** - 打字机效果 Hook
+- **useCountUp** - 数字递增动画 Hook
+- **TiltCard** - 3D 倾斜卡片
+- **Marquee** - 无限滚动跑马灯
+- **GradientText** - 渐变动画文字
+- **GradientBorder** - 渐变动画边框
+- **MorphText** - 文字变形动画
+- **Collapsible** - 折叠面板
 
 ### 其他组件
 - **CodeBlock** - 代码展示
